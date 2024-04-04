@@ -26,6 +26,8 @@ int main(int argc, char *argv[])
     int priority;
     int burst;
 
+    int countT = 0;
+
     in = fopen(argv[1],"r");
     
     while (fgets(task,SIZE,in) != NULL) {
@@ -38,12 +40,22 @@ int main(int argc, char *argv[])
         add(name,priority,burst);
 
         free(temp);
+        countT++;
     }
 
     fclose(in);
 
+    Parameters parameters = {0,0,0};
     // invoke the scheduler
-    schedule();
+    schedule(&parameters);
+
+    float turnaroundTime = (float)parameters.turnaroundTime / countT;
+    float waitingTime = (float)parameters.waitingTime / countT;
+    float responseTime = (float)parameters.responseTime / countT;
+
+    printf("Оборотное время: %.3f\n", turnaroundTime);
+    printf("Время ожидания: %.3f\n", waitingTime);
+    printf("Время отклика: %.3f\n", responseTime);
 
     return 0;
 }
