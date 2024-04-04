@@ -67,6 +67,18 @@ build CMakeFiles/lab2.dir/schedule_priority.c.o: C_COMPILER__lab2_unscanned_Debu
   OBJECT_DIR = CMakeFiles/lab2.dir
   OBJECT_FILE_DIR = CMakeFiles/lab2.dir
 
+build CMakeFiles/lab2.dir/schedule_rr.c.o: C_COMPILER__lab2_unscanned_Debug /home/user/CLionProjects/lab2/schedule_rr.c || cmake_object_order_depends_target_lab2
+  DEP_FILE = CMakeFiles/lab2.dir/schedule_rr.c.o.d
+  FLAGS = -g -std=gnu11 -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles/lab2.dir
+  OBJECT_FILE_DIR = CMakeFiles/lab2.dir
+
+build CMakeFiles/lab2.dir/schedule_priority_rr.c.o: C_COMPILER__lab2_unscanned_Debug /home/user/CLionProjects/lab2/schedule_priority_rr.c || cmake_object_order_depends_target_lab2
+  DEP_FILE = CMakeFiles/lab2.dir/schedule_priority_rr.c.o.d
+  FLAGS = -g -std=gnu11 -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles/lab2.dir
+  OBJECT_FILE_DIR = CMakeFiles/lab2.dir
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target lab2
@@ -75,7 +87,7 @@ build CMakeFiles/lab2.dir/schedule_priority.c.o: C_COMPILER__lab2_unscanned_Debu
 #############################################
 # Link the executable lab2
 
-build lab2: C_EXECUTABLE_LINKER__lab2_Debug CMakeFiles/lab2.dir/schedule_fcfs.c.o CMakeFiles/lab2.dir/schedule_sjf.c.o CMakeFiles/lab2.dir/schedule_priority.c.o
+build lab2: C_EXECUTABLE_LINKER__lab2_Debug CMakeFiles/lab2.dir/schedule_fcfs.c.o CMakeFiles/lab2.dir/schedule_sjf.c.o CMakeFiles/lab2.dir/schedule_priority.c.o CMakeFiles/lab2.dir/schedule_rr.c.o CMakeFiles/lab2.dir/schedule_priority_rr.c.o
   FLAGS = -g
   OBJECT_DIR = CMakeFiles/lab2.dir
   POST_BUILD = :

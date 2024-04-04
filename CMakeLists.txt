@@ -7,4 +7,6 @@ add_executable(lab2
         schedule_fcfs.c
         schedule_sjf.c
         schedule_priority.c
+        schedule_rr.c
+        schedule_priority_rr.c
 )

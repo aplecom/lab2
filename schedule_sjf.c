@@ -42,12 +42,12 @@ void schedule(Parameters *parameters) {
     Task *task = pickNextTask();
     int currentTime = 0;
     while (task != NULL) {
-        parameters->responseTime += currentTime;
+        parameters->responseTime += currentTime; // время отклика
 
         run(task, task->burst);
 
         currentTime += task->burst;
-        parameters->turnaroundTime += currentTime;
+        parameters->turnaroundTime += currentTime; // Оборотное время
 
         task = pickNextTask();
     }
